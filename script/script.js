@@ -29,6 +29,7 @@ deposit = true;
 
 let budgetDay = 70000;
 console.log(budgetDay / 30);
+console.log(budgetDay % 30);
 
 
 
