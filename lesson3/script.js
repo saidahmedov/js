@@ -1,7 +1,7 @@
 let mission = 350000;
 console.log(mission);
 
-let money = prompt('Ваш ежемесячный доход?');
+let money = +prompt('Ваш ежемесячный доход?');
 console.log(money);
 console.log(typeof money);
 
@@ -12,25 +12,23 @@ let deposit = confirm('Есть ли у вас депозит в банке?');
 console.log(deposit);
 console.log(typeof deposit);
 
-income = '150000';
+let income = '150000';
 console.log(typeof income);
 
-
-let costs = prompt('Какие обязательные ежемесячные расходы у вас есть?');
+let costs = +prompt('Какие обязательные ежемесячные расходы у вас есть?');
 console.log(costs);
-let costs2 = prompt('Какие обязательные ежемесячные расходы у вас есть?');
+let costs2 = +prompt('Какие обязательные ежемесячные расходы у вас есть?');
 console.log(costs2);
-let HowMuchCost = prompt('Во сколько это обойдется?');
-console.log(HowMuchCost);
-let HowMuchCost2 = prompt('Во сколько это обойдется?');
-console.log(HowMuchCost2);
- let budgetMonth = money - costs;
+let howMuchCost = +prompt('Во сколько это обойдется?');
+console.log(howMuchCost);
+let howMuchCost2 = +prompt('Во сколько это обойдется?');
+console.log(howMuchCost2);
+let budgetMonth = money - howMuchCost;
 console.log(budgetMonth);
 console.log(Math.ceil(mission / budgetMonth ));
+console.log(Math.floor(budgetMonth / 30));
 
-
-
-let budgetDay = prompt('Введите ваш ежедневный доход');
+let budgetDay = +prompt('Введите ваш ежедневный доход');
 	if (budgetDay > 800) {
 		console.log('Высокий уровень дохода');
 	}
