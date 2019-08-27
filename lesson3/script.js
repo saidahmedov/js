@@ -28,14 +28,14 @@ console.log(budgetMonth);
 console.log(Math.ceil(mission / budgetMonth ));
 console.log(Math.floor(budgetMonth / 30));
 
-let budgetDay = budgetMonth;
+let budgetDay = Math.floor(budgetMonth / 30);
 	if (budgetDay >= 800) {
 		console.log('Высокий уровень дохода');
 	}
-	else if ((budgetDay >= 300) && (budgetDay <= 800)){
+	else if ((budgetDay >= 300) && (budgetDay < 800)){
 		console.log('Средний уровень дохода');
 	}
-	else if ((budgetDay > 0) && (budgetDay <= 300)) {
+	else if ((budgetDay >= 0) && (budgetDay < 300)) {
 		console.log('Низкий уровень дохода');
 	} 
 	else if (budgetDay <= 0)  {
