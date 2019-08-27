@@ -15,32 +15,30 @@ console.log(typeof deposit);
 let income = '150000';
 console.log(typeof income);
 
-let costs = +prompt('Какие обязательные ежемесячные расходы у вас есть?');
+let costs = prompt('Какие обязательные ежемесячные расходы у вас есть?');
 console.log(costs);
-let costs2 = +prompt('Какие обязательные ежемесячные расходы у вас есть?');
+let costs2 = prompt('Какие обязательные ежемесячные расходы у вас есть?');
 console.log(costs2);
 let howMuchCost = +prompt('Во сколько это обойдется?');
 console.log(howMuchCost);
 let howMuchCost2 = +prompt('Во сколько это обойдется?');
 console.log(howMuchCost2);
-let budgetMonth = money - howMuchCost;
+let budgetMonth = money - howMuchCost - howMuchCost2;
 console.log(budgetMonth);
 console.log(Math.ceil(mission / budgetMonth ));
 console.log(Math.floor(budgetMonth / 30));
 
-let budgetDay = +prompt('Введите ваш ежедневный доход');
-	if (budgetDay > 800) {
+let budgetDay = budgetMonth;
+	if (budgetDay >= 800) {
 		console.log('Высокий уровень дохода');
 	}
-	else if ((budgetDay > 300) && (budgetDay < 800)){
+	else if ((budgetDay >= 300) && (budgetDay <= 800)){
 		console.log('Средний уровень дохода');
 	}
-	else if ((budgetDay > 0) && (budgetDay < 300)) {
+	else if ((budgetDay > 0) && (budgetDay <= 300)) {
 		console.log('Низкий уровень дохода');
 	} 
-	else if (budgetDay < 0)  {
+	else if (budgetDay <= 0)  {
 		console.log('Что то пошло не так');
 	}
-	 else {
-		console.log('Что то пошло не так');
-	}
+	
