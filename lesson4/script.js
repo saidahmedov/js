@@ -47,19 +47,15 @@ let getStatusIncome = function (){
    	console.log(getStatusIncome());
 
 
-	function getExpensesMonth(a, b) {
-		return a + b;
+	let getExpensesMonth = function() {
+		return howMuchCost + howMuchCost2;
 	};
-	let result = getExpensesMonth(howMuchCost, howMuchCost2);
-		console.log(result);
-
-	let accumulatedMonth = function getAccumulatedMonth(data) {
-		console.log(data);
+		console.log(getExpensesMonth());
+	let getAccumulatedMonth = function () {
+		return money - getExpensesMonth();
 	};
-		accumulatedMonth(money - result);
-
-	function getTargetMonth(c, d) {
-		return c / d;
-	}
-	let missionForMoth = getTargetMonth(mission, budgetMonth);
-		console.log(Math.floor(missionForMoth));
+		console.log(getAccumulatedMonth());
+	let getTargetMonth = function(){
+		return mission / getAccumulatedMonth();
+	};
+		console.log(Math.floor(getTargetMonth()));
